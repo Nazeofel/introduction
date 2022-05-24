@@ -52,7 +52,7 @@ main{
                 width: inherit;
                 height: inherit;
                 &::after{
-                    content: "Naofel#456";
+                    content: "Naofel#0655";
                     opacity: 0;
                     position: absolute;
                     top: 0;
@@ -78,7 +78,7 @@ main{
                     position: relative;
                     width: inherit;
                     height: inherit;
-                    &::after{
+                   /* &::after{
                         content: "Naofel#456";
                         opacity: 0;
                         position: absolute;
@@ -100,7 +100,7 @@ main{
                         height: 100%;
                         background-color: rgba( black, 0.8);
                         transform: scale(1.2)
-                    }
+                    }*/
                 }
             }
             
