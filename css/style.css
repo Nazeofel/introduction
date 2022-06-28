@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 body {
-  display: grid;
-  justify-content: center;
   background-color: black;
-  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
@@ -25,8 +22,11 @@ body {
 }
 
 main {
-  display: flex;
-  max-width: 800px;
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 main > section {
   width: 500px;
@@ -139,6 +139,30 @@ section p {
           animation-delay: 250ms;
 }
 
+.textcopied {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(212, 193, 193, 0.11);
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 0;
+  text-align: center;
+  font-size: 32px;
+}
+.textcopied > p {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.txtcpdAnimation {
+  box-shadow: 1px 20px 200px #f5f5f5;
+  -webkit-animation: txtcpd 1s linear forwards;
+          animation: txtcpd 1s linear forwards;
+}
+
 /* The typing effect */
 @-webkit-keyframes typing {
   from {
@@ -157,6 +181,26 @@ section p {
   }
   to {
     width: 100%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes txtcpd {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes txtcpd {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
     opacity: 1;
   }
 }

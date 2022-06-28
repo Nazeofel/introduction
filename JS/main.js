@@ -1,8 +1,13 @@
 const discord = document.querySelector(".discord");
 
+const txtcpd = document.querySelector(".textcopied");
+const txtcpdp = document.querySelector(".textcopied > p");
+
 let style = window.getComputedStyle(discord, '::after')
-let color = style.getPropertyValue('content');
+let content = style.getPropertyValue('content');
 
 discord.addEventListener("click", () => {
-    navigator.clipboard.writeText(color);
+    navigator.clipboard.writeText(content);
+    txtcpd.classList.add("txtcpdAnimation");
+    txtcpdp.innerHTML = "Text has been copied to the clipboard !";
 });
