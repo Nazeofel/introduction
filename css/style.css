@@ -20,8 +20,8 @@ body {
   padding: 1rem 2rem 1rem 2rem;
   transition: transform 1s ease;
   height: 50px;
-  -webkit-animation: fadeIn 2s linear;
-          animation: fadeIn 2s linear;
+  -webkit-animation: fadeIn 2s linear forwards;
+          animation: fadeIn 2s linear forwards;
 }
 
 main {
@@ -117,22 +117,24 @@ main > section > .buttons > :nth-child(3):hover {
 }
 
 section h1 {
+  opacity: 0;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
-  -webkit-animation: typing 3.5s steps(40, end);
-          animation: typing 3.5s steps(40, end);
+  -webkit-animation: typing 3.5s steps(40, end) forwards;
+          animation: typing 3.5s steps(40, end) forwards;
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
 }
 section p {
+  opacity: 0;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
-  -webkit-animation: typing 3s steps(40, end);
-          animation: typing 3s steps(40, end);
+  -webkit-animation: typing 3s steps(40, end) forwards;
+          animation: typing 3s steps(40, end) forwards;
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
 }
